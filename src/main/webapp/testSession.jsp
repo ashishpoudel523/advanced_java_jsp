@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.io.*,java.util.*"%>
 <%
-	// Get session creation time. 
+	// Get session creation time.. .
 	Date createTime = new Date(session.getCreationTime());
 	// Get last access time of this web page. 
 	Date lastAccessTime = new Date(session.getLastAccessedTime());
