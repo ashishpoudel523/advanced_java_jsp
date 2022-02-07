@@ -11,21 +11,22 @@
 	String title = "Welcome Back to my website";
 	
 	Integer visitCount = new Integer(0);
+	
 	if(session.getAttribute("visitCount") == null){
 		session.setAttribute("visitCount", visitCount);
-		session.setAttribute("userId", "Ashish");
-		session.setAttribute("userEmail", "ashishpoudel523@gmail.com");
+		session.setAttribute("userId", "Laxman");
+		session.setAttribute("userEmail", "Laxman@gmail.com");
 	}
  // session has key-value pair 
-
+ // "visitCount"=0, userId=Laxman, userEmail=Laxman@gmail.com
 	
 	visitCount = (Integer) session.getAttribute("visitCount");
 	visitCount = visitCount + 1;
 
 	session.setAttribute("visitCount", visitCount);
-	//session.removeAttribute("userId");  this id for removing or deleting from session
-	//session.invalidate();  //this will delete whole session
+	// session.removeAttribute("userId"); this is for removing or deleting from session
 	
+	//session.invalidate(); //this will delete whole session 
 %>
 <html>
 <head>
@@ -35,7 +36,7 @@
 	<center>
 		<h1>Session Tracking</h1>
 	</center>
-	<table border="1rm" align="center" style=background-color:green>
+	<table>
 		<tr >
 			<th>Session info</th>
 			<th>Value</th>
